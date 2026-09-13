@@ -1,0 +1,45 @@
+name: CONTINUED AFFILIATION
+description: Present a venture for consideration.
+title: "[CONTINUED AFFILIATION] "
+labels:
+  - AUDIT REQUIRED
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Submission does not establish continued affiliation.
+
+  - type: input
+    id: current-venture
+    attributes:
+      label: CURRENT VENTURE
+      description: Repository presented for consideration.
+      placeholder: github.com/authority/venture
+    validations:
+      required: true
+
+  - type: input
+    id: immediate-authority
+    attributes:
+      label: IMMEDIATE AUTHORITY
+      description: Repository from which the current venture directly descends.
+      placeholder: github.com/authority/parent
+    validations:
+      required: true
+
+  - type: input
+    id: commit-presented
+    attributes:
+      label: COMMIT PRESENTED
+      description: Exact commit presented for consideration.
+      placeholder: 40-character commit identifier
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acknowledgment
+    attributes:
+      label: ACKNOWLEDGMENT
+      options:
+        - label: I understand that submission does not establish continued affiliation.
+          required: true
